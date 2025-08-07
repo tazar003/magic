@@ -30,7 +30,7 @@ const social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/tazar003",
+    link: "https://github.com/tazar003/",
   },
   {
     name: "LinkedIn",
@@ -53,7 +53,7 @@ const home = {
   headline: <>Building bridges between design and code</>,
   featured: {
     display: true,
-    title: <>Recent project: <strong className="ml-4">Once UI</strong></>,
+    title: <><strong className="ml-4">Recent projects</strong></>,
     href: "/work/building-once-ui-a-customizable-design-system",
   },
   subline: (
