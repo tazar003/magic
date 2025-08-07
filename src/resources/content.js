@@ -9,7 +9,7 @@ const person = {
   role: "Design Engineer",
   avatar: "/images/avatar.jpg",
   email: "info@thomazar.com",
-  location: "Huntsville, Alabama", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  location: "America/Chicago", // IANA timezone for Huntsville, Alabama
   languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
 };
 
