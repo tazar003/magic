@@ -1,4 +1,4 @@
-import { home } from "./content";
+import { home, person } from "./content";
 
 // IMPORTANT: Replace with your own domain address - it's used for SEO in meta tags and schema
 const baseURL = "https://ThomAzar.com";
@@ -175,16 +175,15 @@ const mailchimp = {
 const schema = {
   logo: "",
   type: "Organization",
-  name: "Once UI",
+  name: "Thomas Azar",
   description: home.description,
-  email: "lorant@once-ui.com",
+  email: "Thom@ThomAzar.com",
 };
 
 // social links
 const sameAs = {
-  facebook: "https://www.facebook.com/thomasazar",
   linkedin: "https://www.linkedin.com/in/tomazar/",
-  email: "mailto:${person.email}",
+  email: `mailto:${person.email}`,
 };
 
 export { display, mailchimp, routes, protectedRoutes, baseURL, fonts, style, schema, sameAs, effects, dataStyle };
