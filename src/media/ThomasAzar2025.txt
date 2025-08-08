@@ -1,0 +1,59 @@
+Thomas Azar
+Huntsville, AL • 334.350.1385 • Thomas.Azar@gmail.com
+
+Professional Summary
+Visionary executive with a proven track record of aligning technology initiatives with organizational goals to achieve measurable business outcomes. Experienced in creating innovative solutions that enhance member engagement, drive non-dues revenue, and streamline operations. Adept at forging strategic partnerships, leading cross-functional teams, and delivering transformative leadership. Positioned for executive roles prioritizing business development, growth strategy, and digital innovation.
+
+Certifications
+- CAE – Certified Association Executive, ASAE – Dec 2023
+- CMP – Certified Meeting Professional, Events Industry Council – Jan 2024
+- PMP – Project Management Professional, PMI – Jul 2022
+- Salesforce Certified Administrator (ID #21728324) – Dec 2020
+- Salesforce Business Analyst (ID #22305162) – Jun 2021
+- Salesforce Marketing Cloud Administrator (ID #22305162) – Jun 2021
+- Salesforce Experience Cloud Consultant (ID #22248369) – Jun 2021
+- Professional Scrum Master – PSM1 – Jul 2021
+- Bachelor of Science, Applied Computer Science – Troy University, 2017
+
+Experience
+Chief Innovation Officer — Legal Associations Management (2024–Present)
+- Secured platform/vendor partnerships, opening $1M+ in new non-dues revenue opportunities.
+- Streamlined operations with automation, CRM, and AI—scaling without headcount growth.
+- Unified messaging and campaigns elevating Connect.law’s brand and sponsor conversion.
+- Cultivated partnerships with investors, vendors, and executives for joint innovation.
+- Launched Connect.law (12,000+ members) with communities, referrals, event resources.
+- Directed full-stack product + GTM integrating Salesforce, Cvent, Attorney Share, automation.
+- Built sponsorship/content strategy and media kit, expanding non-dues revenue.
+- Modernized sales pipeline/CRM improving visibility, forecasting, sales velocity.
+- AI-powered data pipelines/dashboards for membership, content, and event analytics.
+- Operational playbooks across sales/marketing/events, improving productivity ~30%.
+- Culture of experimentation to improve engagement and conversion.
+- Oversight on multi-association innovation aligned to strategy; advised on scalability/integration.
+
+Director of Information Technology — Legal Associations Management (2018–2024)
+- Customized Salesforce/Fonteva for 30+ associations; membership grew 7,500 → 14,000.
+- Directed IT for 12+ conferences (Trial Lawyers Summit, Lanier Trial Academy), 15,000+ attendees.
+- Generated $1M+ revenue via digital advertising, webinars, sponsorships.
+- Automation, WordPress plugins, APIs, and AI reduced manual work ~40%, engagement up ~25%.
+- Integrated Salesforce, Fonteva, WordPress, PM tools; efficiency up ~50%.
+- Member portals, communities, and API data sync improved collaboration and engagement.
+- Task systems and training programs improved team efficiency ~30%.
+
+Senior Systems Administrator — Micro Support Services (2015–2018)
+- Managed IT systems for event operations; ensured uptime at conferences.
+- Designed disaster recovery and maintained cybersecurity.
+- Supported clients with Office 365 and cloud productivity tools.
+
+Web Developer — The National Trial Lawyers (2012–2014)
+- Designed/maintained 25+ websites for associations and chapters.
+- Built tools to streamline content management and publishing.
+- Increased website engagement by ~20% via SEO optimization.
+
+Technical Skills
+Leadership • Project Management • Business Analysis • Salesforce CRM • Operations Management • Website Development • Enterprise Solutions • Digital Marketing • Creative Direction • Lifelong Learning
+
+Awards
+- Association Forum Top 40 Under 40
+- ASAE ReadyMe Leadership Program (2024)
+- Fonteva AMS Innovation Award
+

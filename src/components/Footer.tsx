@@ -37,13 +37,13 @@ export const Footer = () => {
         </Text>
         <Flex gap="16">
           {social.map(
-            (item) =>
+            (item: { name: string; link: string; icon: string }) =>
               item.link && (
                 <IconButton
                   key={item.name}
                   href={item.link}
                   icon={item.icon}
-                  tooltip={item.name}
+                  tooltip={String(item.name)}
                   size="s"
                   variant="ghost"
                 />

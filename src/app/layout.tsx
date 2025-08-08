@@ -94,6 +94,25 @@ export default async function RootLayout({
             `,
           }}
         />
+        <script
+          id="fouc-fix"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  // If Next.js dev fallback scripts fail to load, ensure the body is visible
+                  var foucStyle = document.querySelector('style[data-next-hide-fouc]');
+                  if (foucStyle) {
+                    foucStyle.parentNode && foucStyle.parentNode.removeChild(foucStyle);
+                  }
+                  document.addEventListener('DOMContentLoaded', function() {
+                    document.body && (document.body.style.display = 'block');
+                  });
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
       </head>
       <Providers>
         <Column as="body" background="page" fillWidth style={{minHeight: "100vh"}} margin="0" padding="0" horizontal="center">

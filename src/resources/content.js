@@ -8,7 +8,7 @@ const person = {
   },
   role: "Chief Innovation Officer",
   avatar: "/images/avatar.jpg",
-  email: "info@thomazar.com",
+  email: "Thomas.Azar@gmail.com",
   location: "America/Chicago", // IANA timezone for Huntsville, Alabama
   languages: [], // optional: Leave the array empty if you don't want to display languages
 };
@@ -18,8 +18,7 @@ const newsletter = {
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: (
     <>
-      I occasionally write about legal tech, AI, technology, and share thoughts on the intersection of
-      creativity and engineering.
+      I share systems thinking for legal associations: AI workflows, Salesforce/Fonteva playbooks, and product updates from TrialStack.io and Connect.law.
     </>
   ),
 };
@@ -50,16 +49,16 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>AI, automation, and platforms for trial lawyer growth</>,
   featured: {
     display: true,
-    title: <><strong className="ml-4">Recent projects</strong></>,
-    href: "/work/building-once-ui-a-customizable-design-system",
+    title: <><strong className="ml-4">Featured case study</strong></>,
+    href: "/work/trialstack-io-litigation-workflows",
   },
   subline: (
     <>
-      I'm Thomas, Chief Innovation Officer at <Logo icon="/trademarks/wordmark-dark.svg" style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}/>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      I'm Thomas, Chief Innovation Officer at <Logo icon="/trademarks/wordmark-dark.svg" style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}/>, where I scale
+      <br /> legal associations with Salesforce, Fonteva, and AI-driven automation. I also build products like TrialStack.io and Connect.law.
     </>
   ),
 };
@@ -85,7 +84,7 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        {person.firstName} is a {person.location}-based {person.role} helping legal associations and law firms scale with automation, AI, and digital systems. He leads platform strategy, tech innovation, and operational transformation across some of the most influential trial lawyer brands in the country.
+        Visionary executive based in Huntsville, AL with a track record of aligning technology with business goals to drive engagement, non-dues revenue, and operational scale. I lead cross-functional teams, forge strategic partnerships, and deliver platforms and automations that power measurable growth across the legal association ecosystem.
       </>
     ),
   },
@@ -95,23 +94,39 @@ const about = {
     experiences: [
       {
         company: "Legal Associations Management",
-        timeframe: "2018 – Present",
+        timeframe: "2024 – Present",
         role: "Chief Innovation Officer",
         achievements: [
-          <>Scaled operations for 30+ associations using Salesforce, Fonteva, WordPress, and AI — increasing membership from 7,500 to 14,000.</>,
-          <>Directed tech strategy for 12+ major conferences including Trial Lawyers Summit and Lanier Trial Academy — supporting 15,000+ attendees.</>,
-          <>Launched Connect.law and TrialStack.io to power online communities, education, and marketing for trial lawyers and vendors.</>,
-          <>Generated $1M+ in new non-dues revenue via tech-driven campaigns, sponsorships, and automation-first workflows.</>,
-          <>Cut manual work 40% across teams by implementing n8n, Make.com, Salesforce Marketing Cloud, and custom WordPress plugins.</>,
+          <>Secured partnerships with key platforms and vendors, opening $1M+ in new non-dues revenue opportunities.</>,
+          <>Streamlined operations with automation, CRM, and AI—enabling scale without increasing headcount.</>,
+          <>Led unified messaging and campaigns that elevated Connect.law’s brand and sponsor conversion.</>,
+          <>Cultivated investor, vendor, and executive partnerships to co-develop offerings and accelerate adoption.</>,
+          <>Architected and launched Connect.law, uniting 12,000+ members with communities, referrals, and event resources.</>,
+          <>Directed full-stack product development and go-to-market strategy; integrated Salesforce, Cvent, Attorney Share, and automation workflows.</>,
+          <>Built sponsorship/content strategy and media kit, fueling sponsor growth and non-dues revenue.</>,
+          <>Designed and deployed a modernized sales pipeline and CRM improving visibility, forecasting, and sales velocity.</>,
+          <>Built AI-powered data pipelines and dashboards for membership behavior, content engagement, and event performance.</>,
+          <>Rolled out operational playbooks across sales, marketing, and events, improving productivity by ~30%.</>,
+          <>Championed a culture of experimentation and agility to continuously improve engagement and conversion.</>,
+          <>Provided executive oversight on innovation projects across associations, ensuring alignment with strategic goals.</>,
+          <>Advised on platform scalability and enterprise-wide integration planning for future expansion.</>,
         ],
-        images: [
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Connect.law Platform",
-            width: 16,
-            height: 9,
-          },
+        images: [],
+      },
+      {
+        company: "Legal Associations Management",
+        timeframe: "2018 – 2024",
+        role: "Director of Information Technology",
+        achievements: [
+          <>Customized Salesforce/Fonteva for 30+ associations, driving membership growth from 7,500 → 14,000.</>,
+          <>Directed IT strategy for 12+ annual conferences (Trial Lawyers Summit, Lanier Trial Academy) serving 15,000+ attendees.</>,
+          <>Generated $1M+ in additional revenue via tech-enabled advertising, webinars, and strategic sponsorships.</>,
+          <>Implemented automation, custom WordPress plugins, API integrations, and AI tools to reduce manual work ~40% and boost engagement ~25%.</>,
+          <>Integrated Salesforce, Fonteva, WordPress, and PM tools to increase operational efficiency ~50% and reduce redundancies.</>,
+          <>Developed member portals, online communities, and cross-platform data sync via APIs to improve collaboration and engagement.</>,
+          <>Introduced task management systems and training programs, improving team efficiency ~30%.</>,
         ],
+        images: [],
       },
     ],
   },
@@ -121,7 +136,7 @@ const about = {
     institutions: [
       {
         name: "Troy University",
-        description: <>B.S. in Applied Computer Science, 2017</>,
+        description: <>B.S., Applied Computer Science — 2017</>,
       },
     ],
   },
@@ -129,90 +144,33 @@ const about = {
     display: true,
     title: "Certifications",
     institutions: [
-      {
-        name: "CAE – Certified Association Executive",
-        description: <>ASAE, 2023</>,
-      },
-      {
-        name: "CMP – Certified Meeting Professional",
-        description: <>Events Industry Council, 2024</>,
-      },
-      {
-        name: "PMP – Project Management Professional",
-        description: <>Project Management Institute, 2022</>,
-      },
-      {
-        name: "Salesforce Certified Administrator",
-        description: <>Credential ID #21728324, 2020</>,
-      },
-      {
-        name: "Salesforce Business Analyst",
-        description: <>Credential ID #22305162, 2021</>,
-      },
-      {
-        name: "Salesforce Marketing Cloud Administrator",
-        description: <>Credential ID #22305162, 2021</>,
-      },
-      {
-        name: "Salesforce Experience Cloud Consultant",
-        description: <>Credential ID #22248369, 2021</>,
-      },
-      {
-        name: "Professional Scrum Master – PSM1",
-        description: <>Scrum.org, 2021</>,
-      },
+      { name: "CAE – Certified Association Executive", description: <>ASAE — Dec 2023</> },
+      { name: "CMP – Certified Meeting Professional", description: <>Events Industry Council — Jan 2024</> },
+      { name: "PMP – Project Management Professional", description: <>Project Management Institute — Jul 2022</> },
+      { name: "Salesforce Certified Administrator", description: <>ID #21728324 — Dec 2020</> },
+      { name: "Salesforce Business Analyst", description: <>ID #22305162 — Jun 2021</> },
+      { name: "Salesforce Marketing Cloud Administrator", description: <>ID #22305162 — Jun 2021</> },
+      { name: "Salesforce Experience Cloud Consultant", description: <>ID #22248369 — Jun 2021</> },
+      { name: "Professional Scrum Master – PSM1", description: <>Jul 2021</> },
     ],
   },
   awards: {
     display: true,
     title: "Awards",
     institutions: [
-      {
-        name: "Fonteva AMS Innovation Award",
-        description: <>Recognized for cross-org CRM transformation, 2020</>,
-      },
-      {
-        name: "Association Forum 40 Under 40",
-        description: <>Top emerging leader in association space, 2024</>,
-      },
-      {
-        name: "ASAE ReadyMe Leadership Program",
-        description: <>Selected for national leadership initiative, 2024</>,
-      },
+      { name: "Association Forum 40 Under 40", description: <>Top emerging leader in association space</> },
+      { name: "ASAE ReadyMe Leadership Program", description: <>Selected for national leadership initiative (2024)</> },
+      { name: "Fonteva AMS Innovation Award", description: <>Recognized for cross-org CRM transformation</> },
     ],
   },
   technical: {
     display: true,
     title: "Technical skills",
     skills: [
-      {
-        title: "Automation & AI",
-        description: <>n8n, Make, OpenAI, GPT agents — automating workflows, syncing data, and replacing manual tasks.</>,
-        images: [],
-      },
-      {
-        title: "CRM & Marketing Systems",
-        description: <>Salesforce, Fonteva, HubSpot, WordPress, TwentyCRM — implemented across 30+ organizations and events.</>,
-        images: [],
-      },
-      {
-        title: "Platform & Product Dev",
-        description: <>Next.js, Supabase, Tailwind, TypeScript — powering products like TrialStack.io, Connect.law, and speaker portals.</>,
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "TrialStack UI",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Platform workflow",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
+      { title: "Leadership & Strategy", description: <>Executive leadership, business development, growth strategy, cross-functional delivery.</>, images: [] },
+      { title: "CRM & Platforms", description: <>Salesforce (Admin, BA), Fonteva, Experience Cloud, Marketing Cloud, HubSpot, WordPress.</>, images: [] },
+      { title: "Automation & AI", description: <>n8n, Make, OpenAI agents — workflow automation, data sync, and analytics.</>, images: [] },
+      { title: "Events & Revenue Ops", description: <>Cvent, sponsorship ops, lifecycle comms, GTM enablement and analytics.</>, images: [] },
     ],
   },
 };

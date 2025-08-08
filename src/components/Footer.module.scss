@@ -1,6 +1,6 @@
 @use "./breakpoints.scss" as breakpoints;
 
-@media (max-width: breakpoints.$s) {
+@include breakpoints.s {
     .mobile {
         text-align: center;
         flex-direction: column;
