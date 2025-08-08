@@ -49,7 +49,7 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>AI, automation, and platforms for trial lawyer growth</>,
+  headline: <>Building smarter systems, not just prettier screens</>,
   featured: {
     display: true,
     title: <><strong className="ml-4">Featured case study</strong></>,
@@ -57,8 +57,8 @@ const home = {
   },
   subline: (
     <>
-      I'm Thomas, Chief Innovation Officer at <Logo icon="/trademarks/wordmark-dark.svg" style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}/>, where I scale
-      <br /> legal associations with Salesforce, Fonteva, and AI-driven automation. I also build products like TrialStack.io and Connect.law.
+      I design and automate experiences that make technology feel effortless.
+      <br /> From concept to launch, I bridge the gap between vision and execution, crafting tools, workflows, and platforms that work as good as they look.
     </>
   ),
 };
