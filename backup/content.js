@@ -155,7 +155,7 @@ const about = {
       { src: "/images/certifications/psm.png", alt: "Professional Scrum Master – PSM1", title: "Professional Scrum Master – PSM1", width: 100, height: 100 },
       { src: "/images/certifications/sfadmin.png", alt: "Salesforce Certified Administrator", title: "Salesforce Certified Administrator", width: 100, height: 100 },
       { src: "/images/certifications/sfanalyst.png", alt: "Salesforce Business Analyst", title: "Salesforce Business Analyst", width: 100, height: 100 },
-      { src: "/images/certifications/sfmarketing.png", alt: "Salesforce Marketing Cloud Administrator", title: "Salesforce Marketing Cloud Administrator", width: 100, height: 100 },
+      { src: "/images/certifications/marketingcloud.png", alt: "Salesforce Marketing Cloud Administrator", title: "Salesforce Marketing Cloud Administrator", width: 100, height: 100 },
       { src: "/images/certifications/sfexperience.png", alt: "Salesforce Experience Cloud Consultant", title: "Salesforce Experience Cloud Consultant", width: 100, height: 100 },
     ],
   },
@@ -197,6 +197,7 @@ const blog = {
   label: "Blog",
   title: "Writing about design and tech...",
   description: `Read what ${person.name} has been up to recently`,
+  display: true,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
 };
@@ -206,6 +207,7 @@ const work = {
   label: "Work",
   title: `Projects – ${person.name}`,
   description: `Design and dev projects by ${person.name}`,
+  display: true,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };
@@ -215,6 +217,7 @@ const gallery = {
   label: "Gallery",
   title: `Photo gallery – ${person.name}`,
   description: `A photo collection by ${person.name}`,
+  display: true,
   // Images by https://lorant.one
   // These are placeholder images, replace with your own
   images: [

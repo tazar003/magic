@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Avatar,
   Button,
@@ -17,16 +19,6 @@ import TableOfContents from "@/components/about/TableOfContents";
 import styles from "@/components/about/about.module.scss";
 import React from "react";
 
-export async function generateMetadata() {
-  return Meta.generate({
-    title: about.title,
-    description: about.description,
-    baseURL: baseURL,
-    image: `/api/og/generate?title=${encodeURIComponent(about.title)}`,
-    path: about.path,
-  });
-}
-
 export default function About() {
   const structure = [
     {
@@ -40,26 +32,30 @@ export default function About() {
       items: about.work.experiences.map((experience) => experience.company),
     },
     {
-      title: about.studies.title,
-      display: about.studies.display,
-      items: about.studies.institutions?.map((institution) => institution.name) || [],
-    },
-    {
       title: about.certifications?.title,
       display: about.certifications?.display,
-      items: about.certifications?.images?.map((cert) => cert.title) || [],
+      items: [],
     },
     {
       title: about.awards?.title,
       display: about.awards?.display,
       items: about.awards?.institutions?.map((institution) => institution.name) || [],
     },
-    {
-      title: about.technical.title,
-      display: about.technical.display,
-      items: about.technical.skills,
-    },
   ];
+
+  const scrollTo = (id: string, offset: number) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <Column maxWidth="m">
       <Schema
@@ -75,18 +71,6 @@ export default function About() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
-      {about.tableOfContent.display && (
-        <Column
-          left="0"
-          style={{ top: "50%", transform: "translateY(-50%)" }}
-          position="fixed"
-          paddingLeft="24"
-          gap="32"
-          hide="s"
-        >
-          <TableOfContents structure={structure} about={about} />
-        </Column>
-      )}
       <Flex fillWidth mobileDirection="column" horizontal="center">
         {about.avatar.display && (
           <Column
@@ -101,8 +85,8 @@ export default function About() {
           >
             <Avatar src={person.avatar} size="xl" />
             <Flex gap="8" vertical="center">
-              <Icon onBackground="accent-weak" name="globe" />
-              {person.location}
+              <Icon onBackground="accent-weak" name="person" />
+              {person.name}
             </Flex>
             {person.languages.length > 0 && (
               <Flex wrap gap="8">
@@ -112,6 +96,26 @@ export default function About() {
                   </Tag>
                 ))}
               </Flex>
+            )}
+            {about.technical.display && (
+              <Column
+                paddingTop="l"
+                gap="12"
+                horizontal="center"
+              >
+                <Text variant="heading-strong-m" onBackground="neutral-strong">Skills</Text>
+                <Flex wrap gap="8" horizontal="center" style={{ 
+                  maxWidth: "250px",
+                  justifyContent: "center",
+                  alignItems: "center"
+                }}>
+                  {about.technical.skills.map((skill, index) => (
+                    <Tag key={skill} size="m" variant="neutral">
+                      {skill}
+                    </Tag>
+                  ))}
+                </Flex>
+              </Column>
             )}
           </Column>
         )}
@@ -257,40 +261,50 @@ export default function About() {
             </>
           )}
 
-          {about.studies.display && about.studies.institutions && about.studies.institutions.length > 0 && (
-            <>
-              <Heading as="h2" id={about.studies.title} variant="display-strong-s" marginBottom="m">
-                {about.studies.title}
-              </Heading>
-              <Column fillWidth gap="l" marginBottom="40">
-                {about.studies.institutions.map((institution, index) => (
-                  <Column key={`${institution.name}-${index}`} fillWidth gap="4">
-                    <Text id={institution.name} variant="heading-strong-l">
-                      {institution.name}
-                    </Text>
-                    <Text variant="heading-default-xs" onBackground="neutral-weak">
-                      {institution.description}
-                    </Text>
-                  </Column>
-                ))}
-              </Column>
-            </>
-          )}
-
-          {about.certifications?.display && about.certifications.images && about.certifications.images.length > 0 && (
+          {about.certifications?.display && (
             <>
               <Heading as="h2" id={about.certifications.title} variant="display-strong-s" marginBottom="m">
                 {about.certifications.title}
               </Heading>
-              <Column fillWidth gap="l" marginBottom="40">
-                {about.certifications.images?.map((cert, index) => (
-                  <Column key={`${cert.title}-${index}`} fillWidth gap="4">
-                    <Text id={cert.title} variant="heading-strong-l">
-                      {cert.title}
-                    </Text>
-                  </Column>
+              <div style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(4, 1fr)",
+                gridTemplateRows: "repeat(2, 1fr)",
+                gap: "16px",
+                paddingBottom: "40px",
+                justifyItems: "center",
+                maxWidth: "500px",
+                margin: "0 auto"
+              }}>
+                {about.certifications.images.map((image, index) => (
+                  <img
+                    key={index}
+                    width={image.width}
+                    height={image.height}
+                    alt={image.alt}
+                    title={image.title}
+                    src={image.src}
+                    style={{ 
+                      maxWidth: "100px",
+                      maxHeight: "100px",
+                      objectFit: "contain",
+                      borderRadius: "8px",
+                      cursor: "pointer",
+                      transition: "transform 0.2s ease, opacity 0.2s ease"
+                    }}
+                    onMouseEnter={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.style.transform = "scale(1.05)";
+                      target.style.opacity = "0.8";
+                    }}
+                    onMouseLeave={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.style.transform = "scale(1)";
+                      target.style.opacity = "1";
+                    }}
+                  />
                 ))}
-              </Column>
+              </div>
             </>
           )}
 
@@ -300,7 +314,7 @@ export default function About() {
                 {about.awards.title}
               </Heading>
               <Column fillWidth gap="l" marginBottom="40">
-                {about.awards.institutions?.map((institution, index) => (
+                {about.awards.institutions.map((institution, index) => (
                   <Column key={`${institution.name}-${index}`} fillWidth gap="4">
                     <Text id={institution.name} variant="heading-strong-l">
                       {institution.name}
@@ -308,26 +322,6 @@ export default function About() {
                     <Text variant="heading-default-xs" onBackground="neutral-weak">
                       {institution.description}
                     </Text>
-                  </Column>
-                ))}
-              </Column>
-            </>
-          )}
-
-          {about.technical.display && (
-            <>
-              <Heading
-                as="h2"
-                id={about.technical.title}
-                variant="display-strong-s"
-                marginBottom="40"
-              >
-                {about.technical.title}
-              </Heading>
-              <Column fillWidth gap="l">
-                {about.technical.skills.map((skill, index) => (
-                  <Column key={`${skill}-${index}`} fillWidth gap="4">
-                    <Text id={skill} variant="heading-strong-l">{skill}</Text>
                   </Column>
                 ))}
               </Column>
