@@ -106,7 +106,7 @@ export default async function RootLayout({
                     foucStyle.parentNode && foucStyle.parentNode.removeChild(foucStyle);
                   }
                   document.addEventListener('DOMContentLoaded', function() {
-                    document.body && (document.body.style.display = 'block');
+                    // document.body && (document.body.style.display = 'block');
                   });
                 } catch (e) {}
               })();
