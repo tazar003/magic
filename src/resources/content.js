@@ -77,7 +77,7 @@ const about = {
   },
   calendar: {
     display: true,
-    link: "https://calendly.com/trialstack/new-meeting-1",
+    link: "/schedule",
   },
   intro: {
     display: true,
@@ -261,4 +261,11 @@ const gallery = {
   ],
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+const schedule = {
+  path: "/schedule",
+  label: "Schedule",
+  title: `Schedule a Meeting – ${person.name}`,
+  description: `Book a meeting with ${person.name} to discuss your project, collaboration opportunities, or just have a conversation about technology and innovation.`,
+};
+
+export { person, social, newsletter, home, about, blog, work, gallery, schedule };

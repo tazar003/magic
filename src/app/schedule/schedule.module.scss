@@ -1,0 +1,93 @@
+.container {
+  min-height: 100vh;
+  padding: var(--static-space-8);
+  background: var(--color-background);
+}
+
+.content {
+  padding-top: var(--static-space-16);
+  padding-bottom: var(--static-space-16);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  max-width: 600px;
+}
+
+.title {
+  margin-bottom: var(--static-space-8);
+  color: var(--color-text-strong);
+}
+
+.subtitle {
+  text-align: center;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+.calendarContainer {
+
+  margin: 0 auto !important;
+  background: var(--color-background);
+  border-radius: var(--static-space-4);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  
+  // Ensure the TidyCal embed is responsive
+  .tidycal-embed {
+    width: 100% !important;
+    min-height: 600px !important;
+    max-width: 1400px !important;
+  }
+  
+  // Target TidyCal's internal elements
+  iframe,
+  [data-tidycal-embed],
+  .tidycal-embed iframe {
+    width: 100% !important;
+    max-width: 1400px !important;
+    min-width: 1400px !important;
+  }
+}
+
+.info {
+  text-align: center;
+  max-width: 400px;
+}
+
+.infoText {
+  text-align: center;
+  line-height: 1.5;
+  
+  &:first-child {
+    margin-bottom: var(--static-space-4);
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .container {
+    padding: var(--static-space-4);
+  }
+  
+  .content {
+    padding-top: var(--static-space-8);
+    padding-bottom: var(--static-space-8);
+  }
+  
+  .title {
+    font-size: var(--static-space-12);
+  }
+  
+  .subtitle {
+    font-size: var(--static-space-6);
+  }
+  
+  .calendarContainer {
+    .tidycal-embed {
+      min-height: 500px;
+    }
+  }
+}
